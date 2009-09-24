@@ -1,4 +1,6 @@
 
+This script is a feature detection for the CSS3 feature of @font-face. This enables you to use a hosted font file as a font-family in your CSS.
+
 View the full details of this project at:
     http://paulirish.com/2009/font-face-feature-detection/
 
