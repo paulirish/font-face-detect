@@ -8,7 +8,6 @@ My requirements for this detection were:
 
     * No browser userAgent sniffing
     * No extra HTTP request required
-    * The test must be synchronous, no race conditions or HTTP requests
     * Must be performant with a small footprint, natch
     * Results should match the latest research on compatibility
 
