@@ -1,6 +1,7 @@
 
 /*!
  * isFontFaceSupported - v0.7 - 9/24/2009
+ * http://paulirish.com/2009/font-face-feature-detection/
  * 
  * Copyright (c) 2009 Paul Irish
  * MIT license
