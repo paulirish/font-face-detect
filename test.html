@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="modernizr-1.0" class="no-js">
+<head>
+	<title>@fontface test</title>
+	<style media="screen">
+		body {
+			font: 14px/18px Inconsolata;
+		}
+		li {
+			color: #900;
+		}
+		li.yes {
+			color: #090;
+		}
+		li b {
+			color: #000;
+		}
+		
+     span.foo { position: absolute; font-size: 60px; left: 10px; top: 10px; opacity: 0.8; display:none;}
+    
+	</style>
+
+
+
+  
+  <script>
+  	window.start = +new Date();
+  	
+  	window.log = (window.console && console.log) || (window.opera && opera.postMessage) || function(){};
+  </script>
+  <script src="isFontFaceSupported.js"></script>
+
+  
+
+
+</head>
+
+<!--[if lt IE 7 ]> <body id="home" class="ie6 "> <![endif]--> 
+<!--[if IE 7 ]>    <body id="home" class="ie7 "> <![endif]--> 
+<!--[if IE 8 ]>    <body id="home" class="ie8 "> <![endif]--> 
+<!--[if !IE]><!--> <body id="home"> <!--<![endif]-->
+
+
+  
+  <script>
+  
+  document.write('instant results:' + isFontFaceSupported() +'\n ' );
+  
+  
+  document.write('<Br><Br><Br><Br>At '+ (+new Date()) +', test took: '+ ((+new Date()) - start) + 'ms');
+  
+  setTimeout(function(){
+    var str = 'delayed results. are they different?: ' + isFontFaceSupported();
+    //alert(str);
+    document.getElementById('delay').innerHTML = str;
+  },50);
+  
+  </script>
+
+ 	<div id="delay" style="height: 40px"></div>
+  
+
+  <span class="foo" style="font-family: monospace; color: #bada55;">lorem ipsum</span>
+  <span class="foo"  style="font-family: __doesntexist__, monospace; color: #facade;">lorem ipsum</span>
+ 
+  <div id="output" >
+  
+</div>
+
+  
+<script>
+
+  var times = 40, curwidth;
+  (function(){
+    --times;
+ 
+    
+    document.getElementById('output').innerHTML += 'isFontFaceSupported(): '+ isFontFaceSupported()+ '<br>';
+    times && setTimeout(arguments.callee,0);
+  })();
+  
+</script>
+  
+</body>
+</html>

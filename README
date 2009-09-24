@@ -1,0 +1,15 @@
+
+View the full details of this project at:
+    http://paulirish.com/2009/font-face-feature-detection/
+
+My requirements for this detection were:
+
+    * No browser userAgent sniffing
+    * No extra HTTP request required
+    * The test must be synchronous, no race conditions or HTTP requests
+    * Must be performant with a small footprint, natch
+    * Results should match the latest research on compatibility
+
+This script is meant to replace all fontAvailable scripts. It can be asynchronous, but it has much greater accuracy.
+
+
