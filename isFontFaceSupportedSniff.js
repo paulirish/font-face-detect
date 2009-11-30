@@ -36,3 +36,56 @@ var isFontFaceSupported = (function(){
 // opera 10
 // chrome version 4.0.249.4 +
 
+/*  
+Some other fellows use something along these lines:
+var t = {
+    ua: function (z) {
+        if (z) {
+            for (var A = 0; A < this.matchers.length; A++) {
+                var C = this.matchers[A][1];
+                if (C.call(null, z)) {
+                    var B = this.matchers[A][0];
+                    return {
+                        fonts: ( !! B),
+                        format: B
+                    }
+                }
+            }
+            return {
+                fonts: false
+            }
+        }
+    },
+    matchers: [],
+    add: function (A, z) {
+        this.matchers.push([A, z])
+    }
+};
+t.add("standards", function (B) {
+    var A = B.match(/Firefox\/(\d+\.\d+)/);
+    if (A) {
+        var z = A[1];
+        return parseFloat(z) >= 3.5
+    }
+});
+t.add("standards", function (B) {
+    if (B.match(/Chrome/)) {
+        return false
+    }
+    if (B.match(/iPhone/)) {
+        return false
+    }
+    var A = B.match(/Safari\/(\d+\.\d+)/);
+    if (A) {
+        var z = A[1];
+        return parseFloat(z) >= 525.13
+    }
+});
+t.add("explorer", function (B) {
+    var A = B.match(/MSIE\s(\d+\.\d+)/);
+    if (A) {
+        var z = A[1];
+        return parseFloat(z) >= 6
+    }
+});
+*/
