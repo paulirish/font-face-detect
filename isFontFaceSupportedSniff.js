@@ -30,4 +30,9 @@ var isFontFaceSupported = (function(){
       };
 })();
 
+// ie v 5.5 +
+// gecko 1.9+
+// webkit (unsure.. it was in saf 3.2)
+// opera 10
+// chrome version 4.0.249.4 +
 
