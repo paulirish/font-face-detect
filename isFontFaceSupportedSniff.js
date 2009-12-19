@@ -21,15 +21,15 @@ var isFontFaceSupported = (function(){
 
   if (/*@cc_on@if(@_jscript_version>=5)!@end@*/0) 
       return true;
-  if (parsed = ua.match(/rv:(\d+\.\d+\.\d+)[^b].*Gecko\//))
-      return parsed[1] >= '1.9.1';
   if (parsed = ua.match(/Chrome\/(\d+\.\d+\.\d+\.\d+)/))
       return parsed[1] >= '4.0.249.4';
   if ((parsed = ua.match(/Safari\/(\d+\.\d+)/)) && !/iPhone/.test(ua))
       return parsed[1] >= '525.13';
-  if (parsed = ua.match(/Opera.*?Version\/(\d+\.\d+)/))
-      return parsed[1] >= '10.00';
-            
+  if (/Opera/.test(Object.prototype.toString.call(window.opera)))
+      return opera.version() >= '10.00';
+  if (parsed = ua.match(/rv:(\d+\.\d+\.\d+)[^b].*Gecko\//))
+      return parsed[1] >= '1.9.1';    
+              
   return false;
 
 })();
