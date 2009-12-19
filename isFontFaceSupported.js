@@ -62,7 +62,7 @@
       setTimeout(delayedCheck,fontfaceCheckDelay);
     }
 
-    var ret = function(){  return fontret || wid !== spn.offsetWidth; };
+    function ret(){  return fontret || wid !== spn.offsetWidth; };
     
     // allow for a callback
     ret.ready = function(fn){
