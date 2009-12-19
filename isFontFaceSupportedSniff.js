@@ -1,7 +1,7 @@
 
 
 /*!
- * isFontFaceSupported - Sniff variant - v0.8 - 12/19/2009
+ * isFontFaceSupported - Sniff variant - v0.9 - 12/19/2009
  * http://paulirish.com/2009/font-face-feature-detection/
  * 
  * Copyright (c) 2009 Paul Irish
@@ -15,7 +15,7 @@
 */
 
 
-var isFontFaceSupported = (function(){
+var isFontFaceSupported = function(){
 
   var ua = navigator.userAgent, parsed;
 
@@ -32,4 +32,4 @@ var isFontFaceSupported = (function(){
               
   return false;
 
-})();
+}
