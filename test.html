@@ -15,7 +15,8 @@
 		li b {
 			color: #000;
 		}
-		
+
+
      span.foo { position: absolute; font-size: 60px; left: 10px; top: 10px; opacity: 0.8; display:none;}
     
 	</style>
@@ -30,7 +31,11 @@
   </script>
   <script src="isFontFaceSupported.js"></script>
 
-  
+  <script>
+    isFontFaceSupported.ready(function(bool){
+      console.log('hollaback:', bool)
+    })
+  </script>
 
 
 </head>
@@ -62,6 +67,7 @@
 
   <span class="foo" style="font-family: monospace; color: #bada55;">lorem ipsum</span>
   <span class="foo"  style="font-family: __doesntexist__, monospace; color: #facade;">lorem ipsum</span>
+
  
   <div id="output" >
   
@@ -70,7 +76,7 @@
   
 <script>
 
-  var times = 40, curwidth;
+  var times = 10, curwidth;
   (function(){
     --times;
  
