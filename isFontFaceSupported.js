@@ -7,9 +7,7 @@
  * MIT license
  */
 
-  
-  
-  var isFontFaceSupported = (function(){
+var isFontFaceSupported = (function(){
   
   
     var fontret,
@@ -70,4 +68,4 @@
     }  
           
     return ret;
-  })();
+})();
