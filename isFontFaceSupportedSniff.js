@@ -25,10 +25,11 @@ var isFontFaceSupported = (function(){
       return parsed[1] >= '1.9.1';
   if (parsed = ua.match(/Chrome\/(\d+\.\d+\.\d+\.\d+)/))
       return parsed[1] >= '4.0.249.4';
-  if (parsed = ua.match(/Safari\/(\d+\.\d+)/) && !/iPhone/.test(ua))
+  if ((parsed = ua.match(/Safari\/(\d+\.\d+)/)) && !/iPhone/.test(ua))
       return parsed[1] >= '525.13';
   if (parsed = ua.match(/Opera.*?Version\/(\d+\.\d+)/))
       return parsed[1] >= '10.00';
+            
   return false;
 
 })();
