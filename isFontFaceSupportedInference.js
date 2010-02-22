@@ -3,8 +3,8 @@
 /*!
  * isFontFaceSupported - Inference variant - v0.9 - 02/22/2010
  * 
- * Copyright (c) 2010 Mark G.
- * MIT license
+ * Copyright (c) 2010 Marc G.
+ * MIT license - Free as in French. ;)
  */
 
 /* This is an object-inference based feature detection.
