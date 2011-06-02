@@ -19,7 +19,6 @@ var isFontFaceSupported = function(){
     var isNoSupport = false ||
         (('MozOpacity' in document.body.style)&&(!document.body.children)) ||
         ((window.opera)&&(!document.querySelector)) ||
-        (m=/*@cc_on!@*/0) ||
         (((/source/.test(/a/.toString+''))||(window.chrome))&&(!window.openDatabase)) ||
         ((/a/.__proto__=='//')&&(!document.querySelector));
           
